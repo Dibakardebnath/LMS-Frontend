@@ -1,12 +1,13 @@
 import axios from "axios";
-import { DeleteData, GetData, UpdateData, personalData } from "./Action";
+import { DeleteData, GetData, UpdateData } from "./Action";
 
-export const getPublicData = (page) => async (dispatch) => {
+export const getPublicData = (page,value,order) => async (dispatch) => {
   try {
     await axios
-      .get(`https://lazy-jade-barracuda-tux.cyclic.cloud/?page=${page}&limit=4`)
+      .get(`https://lms-backend-jowg.onrender.com?course=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`)
       .then((res) => {
-        dispatch(GetData(res.data));
+        console.log(res.data.user)
+        dispatch(GetData(res.data.user));
       });
   } catch (error) {
     console.log(error);
@@ -14,24 +15,24 @@ export const getPublicData = (page) => async (dispatch) => {
 };
 
 // page,value,order
-export const getPersonalData = (page, value, order) => async (dispatch) => {
-  try {
-    const response = await axios.get(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/dashboard?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${JSON.parse(
-            sessionStorage.getItem("token")
-          )}`,
-        },
-      }
-    );
-    dispatch(personalData(response.data));
-  } catch (error) {
-    console.log(error);
-  }
-};
+// export const getPersonalData = (page, value, order) => async (dispatch) => {
+//   try {
+//     const response = await axios.get(
+//       `/?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,
+//       {
+//         headers: {
+//           "Content-Type": "application/json",
+//           Authorization: `Bearer ${JSON.parse(
+//             sessionStorage.getItem("token")
+//           )}`,
+//         },
+//       }
+//     );
+//     dispatch(personalData(response.data));
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 export const postData = (blog) => async (dispatch) => {
   console.log(blog);
@@ -39,7 +40,7 @@ export const postData = (blog) => async (dispatch) => {
   console.log(token);
   try {
     await axios.post(
-      "https://lazy-jade-barracuda-tux.cyclic.cloud/create",
+      "https://lms-backend-jowg.onrender.com/course/create",
       blog,
       {
         headers: {
@@ -57,7 +58,7 @@ export const deleteData = (_id) => async (dispatch) => {
   try {
     console.log(_id);
     const res = await axios.delete(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/delete/${_id}`,
+      `https://lms-backend-jowg.onrender.com/course/delete/${_id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +78,7 @@ export const deleteData = (_id) => async (dispatch) => {
 export const updateValue = (id, value) => async (dispatch) => {
   try {
     const res = await axios.put(
-      `https://lazy-jade-barracuda-tux.cyclic.cloud/update/${id}`,
+      `https://lms-backend-jowg.onrender.com/course/edit/${id}`,
       value,
       {
         headers: {
