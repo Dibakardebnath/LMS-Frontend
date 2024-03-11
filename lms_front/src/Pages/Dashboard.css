@@ -1,0 +1,295 @@
+
+.myBlog{
+  margin-top: 70px;
+  -webkit-text-stroke: 3px #104721;
+  color: transparent;
+  
+}
+.filterBlog1{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+ 
+}
+.filterBlog2{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+ 
+  border-radius: 5px;
+ 
+}
+.funBlog{
+ width: 90%;
+ margin: auto;
+ 
+}
+
+.funBlog1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 36%;
+    gap: 5px;
+   
+    
+}
+.allFunBtn1{
+ 
+  display: flex;
+  gap: 5px;
+}
+.allFunBtn2{
+  display: flex;
+  gap: 5px;
+}
+.funBlog2{
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 22%;
+  gap: 5px;
+  /* border: 1px solid; */
+}
+.btn:hover{
+    border: white;
+    background-color: teal;
+    
+}
+
+
+.my-data{
+    
+    margin: 30px auto;
+    width:90%;
+    gap:60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+ 
+  .pagination{
+    margin-top: 40px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
+
+  .modal{
+    /* border: 10px solid; */
+    background-color: teal;
+    color: wheat;
+    margin: 200px auto;
+     width:90%;
+     padding: 40px;
+     border-radius: 10px;
+  }
+  .modalbtn{
+    margin-top: 8px;
+    gap: 8px;
+    justify-content: center;
+  }
+.modal input::placeholder{
+  color: wheat;
+}
+
+.modal input{
+  margin-top: 10px;
+}
+
+.editBlog{
+ 
+  width: max-content;
+  margin: auto;
+}
+
+
+/* media queries for mobile */
+@media (max-width:767px){
+  .myBlog{
+    margin-top: 85px;
+    margin-bottom: -80px;
+    -webkit-text-stroke: 3px #104721;
+    color: transparent;
+  }
+  .funBlog{
+   /* border: 1px solid rgb(190, 113, 11); */
+    margin: 100px auto;
+     align-items: top;
+     }
+  .funBlog1{
+ 
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: auto;
+    width: max-content;
+    
+}
+
+.allFunBtn1{
+ 
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ 
+}
+
+.allFunBtn2{
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ 
+}
+.funBlog2{
+  /* border: 1px solid; */
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  margin: 0px auto;
+  width: max-content;
+}
+.allFunBtn1 Button {
+  padding: 2px;
+  height: 4vh;
+ font-size: 10px;
+}
+.allFunBtn2 Button {
+  padding: 2px;
+  height: 4vh;
+ font-size: 10px;
+}
+
+
+
+   .my-data{
+  margin: -60px auto 20px auto;
+    grid-template-columns: repeat(1,1fr);
+
+  }
+  .my-blog{
+    height: max-content;
+    margin:auto;
+    
+  }
+
+  .image-gallery{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    margin: auto;
+   overflow: auto;
+  }
+.TitleGap{
+  display: flex;
+  gap: 10px;
+}
+.modalbtn{
+  /* border: 1px solid; */
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+
+}
+
+  @media (min-width: 721px) and (max-width: 1024px){
+
+    .myBlog{
+      margin-top: 80px;
+      -webkit-text-stroke: 3px #104721;
+      color: transparent;
+      
+    }
+    .funBlog{
+      margin-top:10px;
+      padding: 10px 30px 10px 100px;
+       }
+    .funBlog1{
+  
+      display: flex;
+      flex-direction: column;
+    
+  }
+  .filterBlog1{
+    width: 100px;
+    height: 5vh;
+    margin-left: -70px;
+  }
+  .allFunBtn1{
+ 
+   
+    margin-top: 5px;
+    display: flex;
+    margin-left: -70px;
+    gap: 13px;
+  }
+  .filterBlog2{
+    width: 100px;
+    height: 5vh;
+    margin-left: -70px;
+  }
+  .allFunBtn2{
+   
+    margin-top: 5px;
+    display: flex;
+    margin-left: -70px;
+    gap: 13px;
+  }
+  .funBlog2{
+    margin-left: 120px;
+    width: 50px;
+   
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .allFunBtn1 Button {
+   
+   
+    padding: 2px;
+    height: 4vh;
+   font-size: 10px;
+  }
+  .allFunBtn2 Button {
+    padding: 2px;
+    height: 4vh;
+   font-size: 10px;
+  }
+  
+  
+  
+     .my-data{
+      width: 90%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    
+    }
+    .my-blog{
+      width: 100%;
+      /* height: 24vh; */
+    
+    }
+    .icons{
+      /* border: 1px solid; */
+      margin-bottom: 20px;
+    }
+    .image-gallery{
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 80%;
+      margin: auto;
+     overflow: auto;
+    }
+  .TitleGap{
+    /* border: 1px solid; */
+    display: flex;
+    gap: 10px;
+  }
+
+  }
