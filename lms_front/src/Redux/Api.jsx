@@ -14,25 +14,6 @@ export const getPublicData = (page,value,order) => async (dispatch) => {
   }
 };
 
-// page,value,order
-// export const getPersonalData = (page, value, order) => async (dispatch) => {
-//   try {
-//     const response = await axios.get(
-//       `/?category=${value}&page=${page}&limit=3&sortby=createdAt&order=${order}`,
-//       {
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: `Bearer ${JSON.parse(
-//             sessionStorage.getItem("token")
-//           )}`,
-//         },
-//       }
-//     );
-//     dispatch(personalData(response.data));
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
 
 export const postData = (blog) => async (dispatch) => {
   console.log(blog);

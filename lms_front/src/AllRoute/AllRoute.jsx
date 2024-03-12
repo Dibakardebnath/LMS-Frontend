@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "../Pages/Home";
-import { Dashboard } from "../Pages/Dashboard";
+// import { Dashboard } from "../Pages/Dashboard";
 import { Create } from "../Pages/Create";
 
 import { Register } from "../Pages/Register";
@@ -13,11 +13,9 @@ export const AllRoute = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route
-        path="/dashboard"
-        element={<Dashboard />}
-      />
+      <Route path="/"  element={login || token ? <Home/> : <Navigate to={"/register"} />}
+       />
+     
       <Route
         path="/create"
         element={<Create />}

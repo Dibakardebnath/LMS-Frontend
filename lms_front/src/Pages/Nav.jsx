@@ -26,12 +26,7 @@ export const Nav = () => {
             Home
           </NavLink>
         </li>
-        <li>
-          {" "}
-          <NavLink to={"/dashboard"} className="link">
-            Dashboard
-          </NavLink>
-        </li>
+        
         <li>
           {" "}
           <NavLink to={"/create"} className="link">

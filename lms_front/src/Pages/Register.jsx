@@ -37,7 +37,7 @@ export const Register = () => {
     try {
       if (isLogin) {
         const response = await axios.post(
-          "https://lazy-jade-barracuda-tux.cyclic.cloud/login",
+          "https://lms-backend-jowg.onrender.com/login",
           user,
           {
             headers: { "Content-Type": "application/json" },
@@ -55,7 +55,7 @@ export const Register = () => {
         }
       } else {
         const response = await axios.post(
-          "https://lazy-jade-barracuda-tux.cyclic.cloud/signup",
+          "https://lms-backend-jowg.onrender.com/signup",
           user,
           {
             headers: { "Content-Type": "application/json" },
